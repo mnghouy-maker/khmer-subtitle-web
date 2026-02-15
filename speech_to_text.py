@@ -1,11 +1,7 @@
 import whisper
 
-# Load model once
-model = whisper.load_model("base")
-
-def transcribe_audio(audio_path):
-    """
-    Convert speech to text with timestamps
-    """
-    result = model.transcribe(audio_path)
+def transcribe_audio(path):
+    # 'tiny' is the only version that reliably fits in 512MB RAM
+    model = whisper.load_model("tiny") 
+    result = model.transcribe(path)
     return result["segments"]
