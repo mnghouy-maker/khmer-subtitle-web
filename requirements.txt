@@ -1,0 +1,5 @@
+streamlit
+openai-whisper
+ffmpeg-python
+deep-translator
+torch --extra-index-url https://download.pytorch.org/whl/cpu
